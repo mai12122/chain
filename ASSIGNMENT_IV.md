@@ -297,5 +297,3 @@ event TaskUpdated(uint256 indexed taskId, string newDescription, uint256 timesta
 | `README.md` | This documentation |
 
 ---
-
-**Ready for presentation on June 23rd, 2026!** 🚀
