@@ -1,0 +1,15 @@
+node_modules/
+build/
+dist/
+.env
+.DS_Store
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.log
+npm-debug.log*
+package-lock.json
+.truffle-artifacts/
+node_modules

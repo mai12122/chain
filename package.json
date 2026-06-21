@@ -1,0 +1,28 @@
+{
+  "name": "blockchain-tasks",
+  "version": "1.0.0",
+  "description": "Smart contract project with TaskManager contract",
+  "main": "truffle-config.js",
+  "scripts": {
+    "compile": "truffle compile",
+    "test": "truffle test",
+    "migrate": "truffle migrate",
+    "develop": "truffle develop",
+    "console": "truffle console"
+  },
+  "keywords": [
+    "ethereum",
+    "truffle",
+    "solidity",
+    "smart-contract"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "truffle": "^5.11.5",
+    "ganache": "^7.8.0"
+  },
+  "dependencies": {
+    "web3": "^1.10.3"
+  }
+}
