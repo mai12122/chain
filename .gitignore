@@ -1,15 +1,28 @@
+# Dependencies
 node_modules/
+package-lock.json
+yarn.lock
+
+# Build outputs
 build/
 dist/
+.truffle-artifacts/
+
+# React app folder (separate project)
+chain/
+
+# Environment variables
 .env
-.DS_Store
+.env.local
+
+# IDE
+.vscode/
+.idea/
 *.swp
 *.swo
 *~
-.vscode/
-.idea/
+
+# Logs
 *.log
 npm-debug.log*
-package-lock.json
-.truffle-artifacts/
-node_modules
+yarn-debug.log*
