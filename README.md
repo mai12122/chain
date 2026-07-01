@@ -1,4 +1,85 @@
-# Assignment IV: Smart Contract Development (TaskManager)
+# Assignment IV and V: Smart Contract Development + DApp Development
+
+## Assignment V: DApp Development
+
+This repository now includes a web-based decentralized application that connects the TaskManager smart contract from Assignment IV to a React frontend.
+
+### Objective
+Build a web-based DApp that lets users interact with the deployed smart contract through a browser using MetaMask and Web3.
+
+### What the DApp includes
+- A web-based frontend built with React in `frontend/`
+- Blockchain connectivity through MetaMask and Web3
+- Integration with the deployed Truffle TaskManager smart contract
+- Functions to store and retrieve blockchain data from the user interface
+- Basic input validation and user-friendly status messages
+
+### DApp features in this project
+- Connects to MetaMask with a dedicated Connect button
+- Reads the connected wallet address and network
+- Loads the deployed `TaskManager` contract from Truffle artifacts
+- Retrieves blockchain data and displays it in the UI
+- Supports storing blockchain data through contract write actions such as:
+  - create task
+  - update task
+  - complete task
+- Supports retrieving blockchain data through contract read actions such as:
+  - get a task by id
+  - list all tasks from on-chain storage
+  - get total task count
+  - get owner task count
+
+### Important network note
+The frontend is configured for the local Ganache network used by Truffle.
+
+- RPC URL: `http://127.0.0.1:7545`
+- Chain / network id: `5777`
+
+If MetaMask is connected to another chain, the app will show a network mismatch message and the balance may appear as `0 ETH` even if the address is correct.
+
+### How to run the DApp
+
+#### 1) Start the local blockchain
+Run Ganache and make sure it uses network id `5777`.
+
+#### 2) Deploy the contracts
+From the repository root:
+```bash
+npx truffle migrate --reset --network development
+```
+
+#### 3) Start the frontend
+From the `frontend/` folder:
+```bash
+npm install
+npm start
+```
+
+#### 4) Connect MetaMask
+- Open MetaMask in your browser
+- Select the local Ganache network
+- Import or choose one of the Ganache accounts
+- Click `Connect MetaMask` in the app
+
+### Validation and user experience
+The frontend includes basic validation and status feedback:
+- prevents empty task descriptions
+- validates task IDs before read/write actions
+- shows connection errors and network mismatch messages
+- updates the UI after blockchain actions complete
+
+### Assignment V requirements met
+| Requirement | Implementation |
+|-------------|----------------|
+| Web-based frontend | React frontend in `frontend/src/` |
+| Smart contract integration | Truffle `TaskManager` artifact loaded in `frontend/src/contract.js` |
+| Blockchain connectivity | MetaMask and Web3 connection flow |
+| Store blockchain data | Create, update, and complete task methods from the UI |
+| Retrieve blockchain data | Task lookup, task list, total count, and owner count from the UI |
+| Input validation | Empty input checks, task ID validation, and connection/network checks |
+| User-friendly interface | Status banner, account display, and role display |
+
+---
 
 ## Project overview
 This repository contains a simple Solidity smart contract and a Truffle test suite.
